@@ -1,16 +1,16 @@
-import { Brain, Code2, Database, LineChart } from "lucide-react";
+import { Brain, Code2, Database, Trophy } from "lucide-react";
 
 const stats = [
-  { value: "5+", label: "Years experience" },
-  { value: "30+", label: "Projects shipped" },
-  { value: "12+", label: "ML models in production" },
+  { value: "3+", label: "Years of experience" },
+  { value: "40+", label: "GitHub repositories" },
+  { value: "1000+", label: "Problems solved" },
 ];
 
 const highlights = [
-  { icon: Brain, title: "ML & GenAI", desc: "Training, fine-tuning, and deploying models." },
-  { icon: Database, title: "Data Pipelines", desc: "Reliable ETL, streaming, and warehouses." },
-  { icon: LineChart, title: "Analytics", desc: "Dashboards and insights people actually use." },
-  { icon: Code2, title: "Engineering", desc: "Production-grade Python, SQL, and APIs." },
+  { icon: Brain, title: "RAG & LLMs", desc: "Production RAG pipelines, LangChain, LangGraph, multi-agent systems, and LLM APIs." },
+  { icon: Database, title: "Data Engineering", desc: "ETL pipelines, vector stores (Qdrant, FAISS, ChromaDB), SQL & NoSQL databases." },
+  { icon: Code2, title: "MLOps & APIs", desc: "FastAPI, Flask, Docker, CI/CD with Azure Pipelines and Kubernetes." },
+  { icon: Trophy, title: "Competitive Edge", desc: "Kaggle Expert · 1000+ problems on Codeforces & LeetCode · ECPC coach." },
 ];
 
 const About = () => {
@@ -21,16 +21,18 @@ const About = () => {
           <div>
             <p className="font-mono text-sm text-primary uppercase tracking-widest mb-4">// about</p>
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Turning raw data into <span className="text-gradient">products that think</span>.
+              Building AI that <span className="text-gradient">works in production</span>.
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              I work at the intersection of data engineering and applied AI. From batch pipelines
-              to real-time inference, from classical ML to LLM-powered apps — I build systems that
-              are fast, observable, and easy to evolve.
+              I'm Mahmoud Abdelhamid — an AI Engineer at ThinkTech, where I design and deploy
+              production-grade RAG services that ingest PDFs, run OCR pipelines, and serve
+              structured insights via FastAPI. I combine deep ML knowledge with engineering
+              discipline to ship systems that are reliable, observable, and easy to evolve.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              When I'm not shipping models, I'm probably reading papers, tinkering with embeddings,
-              or arguing about schema design.
+              B.S. Computer Science from Menoufia University — GPA 3.65/4.0, ranked 7th in the
+              college. When I'm not shipping models, I'm coaching competitive programmers,
+              contributing to open-source, or tinkering with the latest LLM research.
             </p>
 
             <div className="grid grid-cols-3 gap-4 mt-10">

@@ -28,14 +28,15 @@ const Hero = () => {
           </div>
 
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight mb-6">
-            Building <span className="text-gradient">intelligent</span>
+            Hi, I'm <span className="text-gradient">Mahmoud</span>
             <br />
-            data systems<span className="text-primary animate-blink">_</span>
+            AI Engineer<span className="text-primary animate-blink">_</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed">
-            I'm a <span className="text-foreground font-medium">Data &amp; AI Engineer</span> who designs
-            pipelines, trains models, and ships GenAI products that actually solve problems.
+            I'm an <span className="text-foreground font-medium">AI Engineer</span> specializing in
+            RAG systems, LLM-powered applications, and production-grade AI — turning complex problems
+            into intelligent, deployable solutions.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-12">
@@ -55,7 +56,7 @@ const Hero = () => {
 
           <div className="flex items-center gap-5 text-muted-foreground">
             <a
-              href="https://github.com"
+              href="https://github.com/0Xuser100"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
@@ -64,7 +65,7 @@ const Hero = () => {
               <Github className="h-5 w-5" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/mahmoud-abdulhamid/"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
@@ -72,7 +73,7 @@ const Hero = () => {
             >
               <Linkedin className="h-5 w-5" />
             </a>
-            <a href="#contact" aria-label="Email" className="hover:text-primary transition-colors">
+            <a href="mailto:mahmoudabdulhamid22@gmail.com" aria-label="Email" className="hover:text-primary transition-colors">
               <Mail className="h-5 w-5" />
             </a>
           </div>

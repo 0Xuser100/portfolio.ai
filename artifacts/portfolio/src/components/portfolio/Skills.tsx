@@ -1,23 +1,27 @@
 const skillGroups = [
   {
     title: "Languages",
-    skills: ["Python", "SQL", "TypeScript", "Bash", "R"],
+    skills: ["Python", "R", "SQL", "Bash"],
   },
   {
-    title: "ML & AI",
-    skills: ["PyTorch", "TensorFlow", "scikit-learn", "Hugging Face", "LangChain", "OpenAI", "RAG"],
+    title: "GenAI & LLMs",
+    skills: ["LangChain", "LangGraph", "CrewAI", "Phidata", "RAG", "Pydantic", "BERT", "GPT", "LLaMA", "Mixtral"],
   },
   {
-    title: "Data & Infra",
-    skills: ["Airflow", "dbt", "Spark", "Kafka", "Snowflake", "BigQuery", "Postgres"],
+    title: "Deep Learning & NLP",
+    skills: ["PyTorch", "TensorFlow", "Keras", "Scikit-learn", "OpenCV", "spaCy", "NLTK"],
   },
   {
-    title: "Cloud & Ops",
-    skills: ["AWS", "GCP", "Docker", "Kubernetes", "Terraform", "GitHub Actions"],
+    title: "Data & Visualization",
+    skills: ["Pandas", "NumPy", "SciPy", "Matplotlib", "Seaborn", "Streamlit"],
   },
   {
-    title: "Visualization",
-    skills: ["Plotly", "Streamlit", "Tableau", "Power BI", "Recharts"],
+    title: "Databases & Vector Stores",
+    skills: ["PostgreSQL", "MySQL", "SQLite", "MongoDB", "Qdrant", "FAISS", "ChromaDB", "SQLAlchemy"],
+  },
+  {
+    title: "MLOps & Tools",
+    skills: ["Docker", "Kubernetes", "FastAPI", "Flask", "Azure Pipelines", "LangSmith", "Langfuse", "Ragas", "Git"],
   },
 ];
 

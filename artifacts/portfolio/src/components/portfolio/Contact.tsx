@@ -15,15 +15,15 @@ const Contact = () => {
             Let's build something <span className="text-gradient">smart</span>.
           </h2>
           <p className="text-muted-foreground text-lg mb-10 max-w-xl mx-auto">
-            Have a project in mind, a role to fill, or just want to chat about data and AI? My
+            Have a project in mind, a role to fill, or just want to chat about AI and LLMs? My
             inbox is open — or ask my AI assistant first.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
             <Button asChild variant="hero" size="xl">
-              <a href="mailto:hello@example.com">
+              <a href="mailto:mahmoudabdulhamid22@gmail.com">
                 <Mail className="h-5 w-5" />
-                hello@example.com
+                mahmoudabdulhamid22@gmail.com
               </a>
             </Button>
             <Button variant="outlineGlow" size="xl" onClick={() => window.dispatchEvent(new Event("open-chatbot"))}>
@@ -34,7 +34,7 @@ const Contact = () => {
 
           <div className="flex items-center justify-center gap-4 text-muted-foreground">
             <a
-              href="https://github.com"
+              href="https://github.com/0Xuser100"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
@@ -43,7 +43,7 @@ const Contact = () => {
               <Github className="h-5 w-5" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/mahmoud-abdulhamid/"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
@@ -55,7 +55,7 @@ const Contact = () => {
         </div>
 
         <p className="text-center text-xs text-muted-foreground mt-12 font-mono">
-          © {new Date().getFullYear()} — Crafted with care &amp; a lot of coffee.
+          © {new Date().getFullYear()} Mahmoud Abdelhamid — Built with passion &amp; a lot of coffee.
         </p>
       </div>
     </section>

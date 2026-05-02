@@ -11,46 +11,60 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "RAG Knowledge Assistant",
+    title: "Enterprise-Grade RAG Platform",
     description:
-      "A retrieval-augmented chatbot over 50k+ internal documents. Hybrid search, citations, and streaming responses.",
-    tags: ["Python", "LangChain", "pgvector", "FastAPI"],
+      "FastAPI-based RAG system for ingesting and validating TXT/PDF/XLSX files. Modular LangChain pipelines for chunking, async MongoDB persistence, and Dockerized deployment with full Postman test coverage.",
+    tags: ["Python", "FastAPI", "LangChain", "MongoDB", "Docker"],
     accent: "primary",
+    repo: "https://github.com/0Xuser100/Production-Ready-RAG-Application",
   },
   {
-    title: "Real-time Fraud Detection",
+    title: "Medical RAG Chatbot",
     description:
-      "Streaming ML pipeline scoring transactions in <100ms. Reduced false positives by 38% with feature store + XGBoost.",
-    tags: ["Kafka", "Spark", "XGBoost", "AWS"],
+      "Flask-based chatbot for clinical PDFs using LangChain retrieval and FAISS search. Conversational memory, hallucination control, Langfuse telemetry, and a responsive UI — deployed with Docker and Jenkins CI/CD.",
+    tags: ["Python", "Flask", "FAISS", "LangChain", "OpenAI", "Langfuse"],
     accent: "accent",
+    repo: "https://github.com/0Xuser100/medical-rag-chatbot",
   },
   {
-    title: "Forecasting Platform",
+    title: "LangChain Chat with SQL DB",
     description:
-      "Multi-tenant time-series forecasting service. Trains 200+ models nightly with backtesting and drift alerts.",
-    tags: ["Prophet", "Airflow", "dbt", "Snowflake"],
+      "Natural language interface to any SQL database powered by LangChain and Groq Cloud. Users query in plain English — the system translates dynamically to SQL and returns structured results via Streamlit.",
+    tags: ["Python", "Streamlit", "LangChain", "SQLAlchemy", "Groq"],
     accent: "secondary",
+    repo: "https://github.com/0Xuser100/Build-a-Question-Answering-system-over-SQL-data",
   },
   {
-    title: "Vision QC for Manufacturing",
+    title: "Multi-Agent Financial Research Assistant",
     description:
-      "Defect detection on factory line cameras. Custom CNN + active learning loop reaching 99.2% recall.",
-    tags: ["PyTorch", "OpenCV", "Triton", "GCP"],
+      "Phidata-based multi-agent system where Groq LLMs coordinate web and finance agents. Delivers Markdown-formatted insights with tables, live news context, and real-time market analysis via YFinance.",
+    tags: ["Python", "Phidata", "Groq", "YFinance", "DuckDuckGo"],
     accent: "primary",
+    repo: "https://github.com/0Xuser100/multi-agent-AI-assistant-built-with-the-Phidata-framework",
   },
   {
-    title: "Analytics Dashboard Suite",
+    title: "Plant Disease CNN Classifier",
     description:
-      "End-to-end analytics for a B2B SaaS — from event ingestion to executive dashboards used by 300+ users daily.",
-    tags: ["dbt", "BigQuery", "Looker", "TypeScript"],
+      "CNN model detecting plant diseases from leaf images with high accuracy. Delivered as an interactive Streamlit app for farmers and researchers — trained on TensorFlow/Keras with end-to-end deployment.",
+    tags: ["Python", "TensorFlow", "Keras", "CNN", "Streamlit"],
     accent: "accent",
+    repo: "https://github.com/0Xuser100/Streamlit-End-to-End-Plant_Disease_CNN_Image_Classifier",
   },
   {
-    title: "LLM Eval Harness",
+    title: "AnimeGPT-LLMOps",
     description:
-      "Open-source toolkit for evaluating LLM outputs with rubric-based scoring, regression tests, and dashboards.",
-    tags: ["Python", "Pydantic", "Streamlit"],
+      "Retrieval-augmented anime recommender using ChromaDB and Groq LLMs with a Streamlit UI. Features Langfuse observability, Docker/Kubernetes deployment, and Grafana Cloud monitoring for a complete LLMOps stack.",
+    tags: ["Python", "LangChain", "ChromaDB", "Groq", "Docker", "Kubernetes", "Grafana"],
     accent: "secondary",
+    repo: "https://github.com/0Xuser100/AnimeGPT-LLMOps",
+  },
+  {
+    title: "MOA Drug Mechanism Prediction",
+    description:
+      "Graduation project — full-stack ML platform predicting drug mechanisms of action (Kaggle Lish-MOA). Autoencoder-based deep learning, ensemble models (XGBoost), Flask API backend with Next.js frontend.",
+    tags: ["Python", "TensorFlow", "XGBoost", "Flask", "Next.js", "PostgreSQL"],
+    accent: "primary",
+    repo: "https://github.com/0Xuser100/Projects",
   },
 ];
 
@@ -74,7 +88,7 @@ const Projects = () => {
             </h2>
           </div>
           <p className="text-muted-foreground max-w-md">
-            A few things I've built recently. Ask the assistant in the corner for the deep dive.
+            Real projects shipped for clients and personal research. Ask the AI assistant for the deep dive.
           </p>
         </div>
 
@@ -110,7 +124,9 @@ const Projects = () => {
                       </a>
                     )}
                     <a
-                      href={p.link ?? "#"}
+                      href={p.repo ?? "https://github.com/0Xuser100"}
+                      target="_blank"
+                      rel="noreferrer"
                       className="p-2 rounded-lg border border-border hover:border-primary hover:text-primary transition-colors"
                       aria-label="Open project"
                     >
