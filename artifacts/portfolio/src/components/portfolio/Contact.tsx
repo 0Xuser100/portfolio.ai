@@ -43,7 +43,7 @@ const Contact = () => {
               <Github className="h-5 w-5" />
             </a>
             <a
-              href="https://www.linkedin.com/in/mahmoud-abdulhamid/"
+              href="https://www.linkedin.com/in/mahmoud-abdulhamid-052244230/"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"

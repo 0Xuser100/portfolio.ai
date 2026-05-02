@@ -7,9 +7,35 @@ type Project = {
   accent: "primary" | "accent" | "secondary";
   link?: string;
   repo?: string;
+  featured?: boolean;
 };
 
 const projects: Project[] = [
+  {
+    title: "OrionIntel",
+    description:
+      "Enterprise AI platform for document intelligence — analyzes company files, finance reports, and books via a production-grade RAG pipeline. FastAPI backend, OCR ingestion, vector search, and Dockerized deployment.",
+    tags: ["Python", "FastAPI", "LangChain", "RAG", "Docker", "OpenAI"],
+    accent: "primary",
+    repo: "https://github.com/0Xuser100/OrionIntel",
+    featured: true,
+  },
+  {
+    title: "Baseera",
+    description:
+      "AI-powered insight platform built with Nuxt.js and deployed on Cloudflare Workers. Full-stack TypeScript application with server-side AI integrations and a modern, production-ready architecture.",
+    tags: ["TypeScript", "Nuxt.js", "Cloudflare Workers", "AI"],
+    accent: "accent",
+    repo: "https://github.com/0Xuser100/Baseera",
+  },
+  {
+    title: "MOA Drug Mechanism Prediction",
+    description:
+      "Graduation project — full-stack ML web app predicting drug mechanisms of action (Kaggle Lish-MOA). Gene expression + cell viability data fed into autoencoder deep learning and ensemble models, served via Flask API with a Next.js frontend.",
+    tags: ["Python", "TensorFlow", "XGBoost", "Scikit-learn", "Flask", "Next.js"],
+    accent: "secondary",
+    repo: "https://github.com/0Xuser100/Mechanism-Of-Action-Graduation-Project-",
+  },
   {
     title: "Enterprise-Grade RAG Platform",
     description:
@@ -27,20 +53,20 @@ const projects: Project[] = [
     repo: "https://github.com/0Xuser100/medical-rag-chatbot",
   },
   {
-    title: "LangChain Chat with SQL DB",
-    description:
-      "Natural language interface to any SQL database powered by LangChain and Groq Cloud. Users query in plain English — the system translates dynamically to SQL and returns structured results via Streamlit.",
-    tags: ["Python", "Streamlit", "LangChain", "SQLAlchemy", "Groq"],
-    accent: "secondary",
-    repo: "https://github.com/0Xuser100/Build-a-Question-Answering-system-over-SQL-data",
-  },
-  {
     title: "Multi-Agent Financial Research Assistant",
     description:
       "Phidata-based multi-agent system where Groq LLMs coordinate web and finance agents. Delivers Markdown-formatted insights with tables, live news context, and real-time market analysis via YFinance.",
     tags: ["Python", "Phidata", "Groq", "YFinance", "DuckDuckGo"],
-    accent: "primary",
+    accent: "secondary",
     repo: "https://github.com/0Xuser100/multi-agent-AI-assistant-built-with-the-Phidata-framework",
+  },
+  {
+    title: "LangChain Chat with SQL DB",
+    description:
+      "Natural language interface to any SQL database powered by LangChain and Groq Cloud. Users query in plain English — the system translates dynamically to SQL and returns structured results via Streamlit.",
+    tags: ["Python", "Streamlit", "LangChain", "SQLAlchemy", "Groq"],
+    accent: "primary",
+    repo: "https://github.com/0Xuser100/Build-a-Question-Answering-system-over-SQL-data",
   },
   {
     title: "Plant Disease CNN Classifier",
@@ -57,14 +83,6 @@ const projects: Project[] = [
     tags: ["Python", "LangChain", "ChromaDB", "Groq", "Docker", "Kubernetes", "Grafana"],
     accent: "secondary",
     repo: "https://github.com/0Xuser100/AnimeGPT-LLMOps",
-  },
-  {
-    title: "MOA Drug Mechanism Prediction",
-    description:
-      "Graduation project — full-stack ML platform predicting drug mechanisms of action (Kaggle Lish-MOA). Autoencoder-based deep learning, ensemble models (XGBoost), Flask API backend with Next.js frontend.",
-    tags: ["Python", "TensorFlow", "XGBoost", "Flask", "Next.js", "PostgreSQL"],
-    accent: "primary",
-    repo: "https://github.com/0Xuser100/Projects",
   },
 ];
 
@@ -96,8 +114,17 @@ const Projects = () => {
           {projects.map((p) => (
             <article
               key={p.title}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:border-primary/40"
+              className={`group relative overflow-hidden rounded-2xl border bg-card p-6 transition-all hover:-translate-y-1 hover:border-primary/40 ${
+                p.featured ? "border-primary/40 shadow-glow lg:col-span-1" : "border-border"
+              }`}
             >
+              {p.featured && (
+                <div className="absolute top-4 right-4 z-10">
+                  <span className="text-xs font-mono px-2 py-1 rounded-md bg-primary/20 border border-primary/40 text-primary">
+                    Featured
+                  </span>
+                </div>
+              )}
               <div
                 className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${accentMap[p.accent]} opacity-60 transition-opacity`}
                 aria-hidden
